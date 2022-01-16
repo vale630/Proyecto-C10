@@ -4,7 +4,7 @@ var seaImg,shipImg;
 function preload(){
   //descomentar el código para agregar la animación del barco 
 
-  shipImg1 = loadAnimation("ship-1.png");
+  shipImg1 = loadAnimation("ship-1.png","ship-2.png","ship-1.png","ship-2.png");
   //shipImg1 = loadAnimation("ship-1.png");
   //shipImg1 = loadAnimation("ship-1");
   //shipImg1 = loadAnimation("ship-1.png","ship-2.png","ship-1.png","ship-2.png");
@@ -35,7 +35,9 @@ function draw() {
   sea.velocityX = -3;
 
   //descomentar el código para reiniciar el fondo
-  if(sea.x < 0){
+  if(sea.x < 0)
+  sea.x = sea.width/8;
+  {
     //sea.x = 0;
     //sea.x = sea.width;
     //sea.x = sea.width/8;
